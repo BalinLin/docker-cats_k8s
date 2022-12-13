@@ -5,6 +5,7 @@
 - Install kubernetes and [start minikube with Calico CNI Manifest](https://projectcalico.docs.tigera.io/getting-started/kubernetes/minikube)
 ```bash
 minikube start --network-plugin=cni
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/calico.yaml
 ```
 - (Optional) Install [OpenLens](https://github.com/MuhammedKalkan/OpenLens) and [kubens](https://github.com/ahmetb/kubectx)
 
