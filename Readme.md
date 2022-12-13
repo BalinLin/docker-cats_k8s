@@ -1,16 +1,19 @@
+`kubernetes: v1.25.3` `Minicube: v1.28.0`
+
 ## Before running the project.
 
-- [Start minikube with Calico CNI Manifest](https://projectcalico.docs.tigera.io/getting-started/kubernetes/minikube)
+- Install kubernetes and [start minikube with Calico CNI Manifest](https://projectcalico.docs.tigera.io/getting-started/kubernetes/minikube)
 ```bash
 minikube start --network-plugin=cni
 ```
+- (Optional) Install [OpenLens](https://github.com/MuhammedKalkan/OpenLens) and [kubens](https://github.com/ahmetb/kubectx)
 
-- Create registry secret and `.yaml`
+- (Optional) Create registry secret and `.yaml`
 ```bash
 kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> --output=yaml > <your-yaml-filename>
 ```
 
-- Create registry `.yaml` only (with `--dry-run`)
+- (Optional) Create registry `.yaml` only (with `--dry-run`)
 ```bash
 kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> --dry-run=client --output=yaml > <your-yaml-filename>
 ```
