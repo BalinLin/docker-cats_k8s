@@ -11,12 +11,7 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/
 
 - (Optional) Create registry secret and `.yaml`
 ```bash
-kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> --output=yaml > <your-yaml-filename>
-```
-
-- (Optional) Create registry `.yaml` only (with `--dry-run`)
-```bash
-kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> --dry-run=client --output=yaml > <your-yaml-filename>
+kubectl create secret docker-registry <your-secret-name> --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> --output=yaml > <your-yaml-filename>
 ```
 
 ## Run the project.
