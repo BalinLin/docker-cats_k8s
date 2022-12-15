@@ -5,9 +5,9 @@ metadata:
   namespace: docker-cats
 spec:
   ### An empty podSelector selects all pods in the namespace.
-  podSelector:
-    matchLabels:
-      app: docker-cats-baby
+  # podSelector:
+  #   matchLabels:
+  #     app: docker-cats-baby
   ### If no policyTypes are specified on a NetworkPolicy then by default Ingress will always be set and Egress will be set if the NetworkPolicy has any egress rules.
   policyTypes:
     - Ingress
@@ -27,13 +27,16 @@ spec:
       ports:
         - protocol: TCP
           port: 8080
-  egress:
-    - to:
-        - ipBlock:
-            cidr: 10.0.0.0/24
-      ports:
-        - protocol: TCP
-          port: 8080
+  # egress:
+  # - {}
+
+  # egress:
+  #   - to:
+  #       - ipBlock:
+  #           cidr: 10.0.0.0/24
+  #     ports:
+  #       - protocol: TCP
+  #         port: 8080
 
 # ---
 # apiVersion: networking.k8s.io/v1

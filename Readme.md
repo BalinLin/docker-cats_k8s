@@ -78,3 +78,11 @@ while true; do curl http://baby.com; done
 
 11. Test network policy
 - Try to modify `docker-cats-network.yaml` and apply it to see the difference.
+- If you are able to visit the url in `step 8` which means your ingress is open to your host.
+- If you are not able to use `wget` to download external file via the internet which means your egress is not open to the external address.
+
+```bash
+# enter your pod and test egress
+kubectl exec -it <pod name> -- sh
+wget http://ftp.gnu.org/gnu/wget/wget-1.19.tar.gz
+```
