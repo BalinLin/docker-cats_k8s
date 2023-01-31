@@ -1,5 +1,8 @@
 `kubernetes: v1.25.3` `Minicube: v1.28.0`
 
+## About the project
+![image](./workflow.png)
+
 ## Before running the project.
 
 - Install kubernetes and [start minikube with Calico CNI Manifest](https://projectcalico.docs.tigera.io/getting-started/kubernetes/minikube)

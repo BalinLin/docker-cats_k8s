@@ -19,21 +19,21 @@ spec:
       - name: baby
         image: unfor19/docker-cats
         ports:
-        - name: liveness-port
+        - name: probe-port
           containerPort: 8080
         readinessProbe:
           tcpSocket:
-            port: 8080
+            port: probe-port
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           initialDelaySeconds: 15
           periodSeconds: 20
         startupProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           failureThreshold: 30
           periodSeconds: 10
         env:
@@ -71,21 +71,21 @@ spec:
       - name: green
         image: unfor19/docker-cats
         ports:
-        - name: liveness-port
+        - name: probe-port
           containerPort: 8080
         readinessProbe:
           tcpSocket:
-            port: 8080
+            port: probe-port
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           initialDelaySeconds: 15
           periodSeconds: 20
         startupProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           failureThreshold: 30
           periodSeconds: 10
         env:
@@ -123,21 +123,21 @@ spec:
       - name: dark
         image: tunfor19/docker-cats
         ports:
-        - name: liveness-port
+        - name: probe-port
           containerPort: 8080
         readinessProbe:
           tcpSocket:
-            port: 8080
+            port: probe-port
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           initialDelaySeconds: 15
           periodSeconds: 20
         startupProbe:
           tcpSocket:
-            port: liveness-port
+            port: probe-port
           failureThreshold: 30
           periodSeconds: 10
         env:
