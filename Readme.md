@@ -30,7 +30,7 @@ kubectl create namespace docker-cats
 kubens docker-cats
 ```
 
-4. Enabel addons
+4. Enable addons
 ```bash
 minikube addons enable ingress # ingress
 minikube addons enable metrics-server # hpa
@@ -58,7 +58,7 @@ sudo -- sh -c 'echo "127.0.0.1 dark.com" >> /etc/hosts'
 minikube tunnel
 ```
 
-8. Open your browser and paste the following url
+8. Open your browser and paste the following URL
 ```bash
 http://baby.com/
 http://green.com/
@@ -81,7 +81,7 @@ while true; do curl http://baby.com; done
 
 11. Test network policy
 - Try to modify `docker-cats-network.yaml` and apply it to see the difference.
-- If you are able to visit the url in `step 8` which means your ingress is open to your host.
+- If you are able to visit the URL in `step 8` which means your ingress is open to your host.
 - If you are not able to use `wget` to download external file via the internet which means your egress is not open to the external address.
 
 ```bash
